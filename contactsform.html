@@ -1,0 +1,80 @@
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="vendors/jquery.js"></script>
+<script src="js/maskedinput.js"></script>
+
+<style>
+	.inpt-message {
+		width: 100%;
+		height: 100px;
+	}
+
+	.inpt-contacts-email {
+		margin: 20px 0 0 0;
+		width: 100%;
+	}
+
+	.contact-box {
+		overflow: hidden;
+	}
+
+</style>
+
+<div class="form">
+
+<div class="page-modal"></div>
+
+<div class="contact-box">
+
+	<form>
+
+		<div class="close-form"></div>
+
+		<h2 class="contacts-hd">Обратная связь</h2>
+
+		<div class="field-reg">
+			<input class="inpt-contacts-email" type="text" name="email" placeholder="email@mail.com"/>
+		</div>
+
+		<div class="field-reg ">
+			<textarea class="inpt-message" type="text" name="message" placeholder="У тебя есть какойто вопрос или возникла проблема? Напиши об этом!"/></textarea>
+		</div>
+
+		<div class="confirm-checkbox">
+			<input type="checkbox" id="ch2" name="checkboxcontacttwo" />
+			<label for="ch2"><span class="chbox"></span><span class="contacts-question">Вопросы связанные с тех. неполадками</span></label>
+		</div>
+
+		<div class="confirm-checkbox">
+			<input type="checkbox" id="ch3" name="checkboxcontacttwo" />
+			<label for="ch3"><span class="chbox"></span><span class="contacts-question">Вопросы связанные с призами и их доставкой</span></label>
+		</div>
+
+		<input type="button" class="btn-contact" value="Ok">
+
+	</form>
+
+</div>
+
+</div>
+
+<script type="text/javascript">
+
+	$(".form").fadeIn(300);
+
+            
+    $(function() {
+
+        $(".contact-box").css({"top": ($(window).height() - $(".contact-box").outerHeight()) / 2 + "px",
+                             "left": ($(window).width() - $(".contact-box").outerWidth()) / 2 + "px"});
+
+
+        $(".page-modal, .close-form").click(function() {
+
+               $(".form").fadeOut(300);
+
+        });
+    
+    });
+
+</script>

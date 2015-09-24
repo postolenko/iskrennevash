@@ -1,0 +1,122 @@
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="vendors/jquery.js"></script>
+<script src="js/maskedinput.js"></script>
+
+<div class="page-modal"></div>
+
+<div class="registration-box clearfix">
+
+	<form>
+		<div class="close-form"></div>
+
+		<h2 class="registration-hd registration-enter-hd-active">Регистрация</h2>
+		<h2 class="signin-hd-in-registration">Вход</h2>
+
+		<div class="field-reg">
+			<label class="field-mane field-name">ФИО</label><input class="inpt-name" type="text" name="name"/>
+		</div>
+
+		<div class="field-reg email-reg-field">
+			<label class="field-mane field-name">Email</label><input class="inpt-name" type="text" name="email" placeholder="email@mail.com"/>
+		</div>
+
+		<div class="field-reg">
+			<label class="field-mane field-tel">Телефон</label>
+			<input type="text" class="inpt-code-tel" id="phone" name="tel" placeholder="+7(___) ___-__-__">
+		</div>
+
+		<div class="field-reg password-reg-field">
+			<label class="field-password">Пароль</label><input class="inpt-pass inpt-pass-reg" type="password" name="tel"/>
+		</div>
+
+		<div class="field-reg">
+			<label class="field-confirm-password">Подтверждение пароля</label><input class="inpt-pass-confirm" type="password" name="tel"/>
+		</div>
+
+		<div class="confirm-checkbox">
+			<input type="checkbox" id="c1" name="cc" />
+			<label for="c1"><span class="chbox"></span>
+				<span class="confirm-registration">Я принимаю</span> <a class="user-confirmation" href="">пользовательское соглашение</a>
+			</label>
+		</div>
+
+		<input type="button" class="btn-registration" value="Зарегистрироваться">
+
+		<input type="button" class="btn-signin" value="Войти">
+
+	</form>
+
+	<h2 class="social-net-hd">Или войдите как пользователь социальной сети:</h2>
+
+	<ul class="social-net-links-list">
+		<li class="socilanet-l"><a class="socialnet-link socialnet-link-vk" href="http://vk.com/"></a></li>
+		<li class="socilanet-l"><a class="socialnet-link socialnet-link-ok" href="http://ok.ru/"></a></li>
+		<li class="socilanet-l"><a class="socialnet-link socialnet-link-fcb" href="https://uk-ua.facebook.com/"></a></li>
+		<li class="socilanet-l"><a class="socialnet-link socialnet-link-inst" href="https://instagram.com/"></a></li>
+	</ul>
+
+	<p class="important_fields">Поля обязательные для заполнения</p>
+
+</div>
+
+<script type="text/javascript">
+   jQuery(function($){
+		$("#phone").mask("+7(999) 999-99-99");
+   });
+
+   	$(".btn-signin").css({"display":"none"});
+
+   	var formExist = "registration";
+
+   	$(".signin-hd-in-registration").click(function() {
+
+   		if(formExist == "registration") {
+
+	   		$("form div:not(.close-form, .email-reg-field, .password-reg-field)").hide();
+			$(".btn-registration, .important_fields").hide();
+			
+			$(".btn-signin").show();
+
+			$(".registration-hd").removeClass("registration-enter-hd-active");
+			$(".signin-hd-in-registration").addClass("registration-enter-hd-active");
+
+			$(".field-password").css({"width": 24+"%"});
+			$(".inpt-pass").css({"width": 74+"%"});	
+
+			formExist = "signin";
+
+		}
+
+   	});
+
+
+   	$(".registration-hd").click(function(){
+
+   		if(formExist == "signin") {
+
+	   		$("form div:not(.close-form, .email-reg-field, .password-reg-field)").show();
+			$(".btn-registration, .important_fields").show();
+			
+			$(".btn-signin").hide();
+
+			$(".registration-hd").addClass("registration-enter-hd-active");
+
+			if( $(".signin-hd-in-registration").hasClass("registration-enter-hd-active") ) {
+
+				$(".signin-hd-in-registration").removeClass("registration-enter-hd-active");
+
+			}
+
+			$(".field-password").css({"width": 58+"%"});
+			$(".inpt-pass").css({"width": 42+"%"});
+
+			formExist = "registration";
+
+   		}  		
+
+   	});
+
+
+
+</script>

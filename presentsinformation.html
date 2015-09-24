@@ -1,0 +1,159 @@
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="vendors/jquery.js"></script>
+
+<style>
+	
+	.information-box {
+		width: 650px;
+		padding: 23px;
+		border: 10px solid #416E94;
+		background: #ffffff;
+		-webkit-border-radius: 30px;
+		-moz-border-radius: 30px;
+		-ms-border-radius: 30px;
+		-o-border-radius: 30px;
+		border-radius: 30px;
+		z-index: 999;
+		position: relative;
+	}
+
+	.close-information-box {
+		cursor: pointer;
+		position: absolute;    
+		top: 5px;
+		right: 10px;
+		padding: 8px 14px 11px 14px;
+		color: #ffffff;
+		font-size: 15px; 
+		line-height: 15px;
+		-webkit-border-radius: 50%;
+		-moz-border-radius: 50%;
+		-ms-border-radius: 50%;
+		-o-border-radius: 50%;
+		border-radius: 50%;
+		background: rgba(65, 110, 148, .6);
+	}
+
+	.close-information-box:after {
+	    content: "\78";
+	}
+
+	.present-information-hd {
+		font-family: "Calibri", Arial, sans-serif;
+		font-size: 14px;
+		line-height: 15px;
+		font-weight: bold;
+		color: #416E94;
+		padding: 10px 0;
+	}
+
+	.present-information-hd:first-child {
+		padding-top: 0;
+	}
+
+	.present-information-description {
+		text-align: justify;
+	}
+
+	.present-information-l {
+		font-family: "Calibri", Arial, sans-serif;
+		font-size: 14px;
+		line-height: 15px;
+		color: #416E94;
+	}
+
+	.present-information-l-num {
+		padding: 0 3px 0 0;
+	}
+
+	.present-information-l-num:after {
+		content: ".";
+	}
+
+</style>
+
+<div class="form">
+
+<div class="page-modal"></div>
+
+<div class="information-box">
+
+	<div class="close-information-box"></div>
+
+	<h2 class="present-information-hd">Формула розыгрыша «Набор молочной продукции»</h2>
+
+	<ul class="present-information-description">
+
+		<li class="present-information-l">
+			<p><span class="present-information-l-num">1</span>Если количество участников до 129 чел, то подарок получают первые 65 по списку;  не совсем понятно, почему  гарантированный приз получают 50 участников, прописано «первые 65». Первые 50 получают на первой неделе. Остальные по формуле.  Речь шла об этом. Или мы каждую неделю будем выдавать подарок только первым 50-ти? В принципе, такое может быть, если у нас вводится правило, по которому призы уровней участники могут получить только 1 раз. Хотя, таким образом мы ограничиваем участников, которые «не гоняются за журавлем в небе» – есть определенная категория участников Акций, которые активно собирают баллы для получения призов самого низкого уровня, такая у них мотивация. Если мы их ограничим одним разом, то они могут отказаться от дальнейшего участия в Акции. Или еще такой момент:  участник не вводил коды сразу, набрав кодов на 200 баллов, зашел на сайт и зарегистрировал их. В таком случае, он автоматически попадает на второй уровень призов? А если он хочет принять участие в борьбе за приз 1-го уровня?</p>
+			<p>Если количество участников от 130 чел, то победители определяются следующим образом - общее количество участников (Х) делится на количество призов недели, полученное число (N) округляется в большую сторону, победителем становится каждый N-ый участник из списка. Список формируется каждую неделю по результатам накопленных баллов от большего к меньшему в порядке регистрации (от раннего к позднему). Таким образом, каждую неделю позиции участников Акции в списке меняются в зависимости от их активности.</p>
+		</li>
+
+		<li class="present-information-l">
+			<p><span class="present-information-l-num">2</span>Участники, получившие приз первого уровня, далее в розыгрыше призов этого уровня не участвуют</p>
+		</li>
+
+	</ul>
+
+	<h2 class="present-information-hd">Формула розыгрыша приза «Кормушка для птиц»</h2>
+
+	<ul class="present-information-description">
+
+		<li class="present-information-l">
+			<p><span class="present-information-l-num">1</span>Если количество участников до 79 чел, то подарок получают первые 40 по списку;</p>
+		</li>
+
+		<li class="present-information-l">
+			<p><span class="present-information-l-num">2</span>Если количество участников от 80 чел, то победители определяются следующим образом - общее количество участников (Х) делится на количество призов недели, полученное число (N) округляется в большую сторону, победителем становится каждый N-ый участник из списка. Список формируется каждую неделю по результатам накопленных баллов от большего к меньшему в порядке регистрации (от раннего к позднему). Таким образом, каждую неделю позиции участников Акции в списке меняются в зависимости от их активности</p>
+		</li>
+
+		<li class="present-information-l">
+			<p><span class="present-information-l-num">3</span>Участники, получившие приз второго уровня, далее в розыгрыше призов этого уровня не участвуют</p>
+		</li>
+
+	</ul>
+
+	<h2 class="present-information-hd">Формула розыгрыша приза «Поездка на ферму»</h2>
+
+	<ul class="present-information-description">
+
+		<li class="present-information-l">
+			<p><span class="present-information-l-num">1</span>Если количество участников до 39 чел, то подарок получают первые 20 по списку;</p>
+		</li>
+
+		<li class="present-information-l">
+			<p><span class="present-information-l-num">2</span>Если количество участников от 40 чел, то победители определяются следующим образом - общее количество участников (Х) делится на количество призов недели, полученное число (N)</p>
+		</li>
+
+	</ul>
+
+</div>
+
+</div>
+
+<script type="text/javascript">
+
+            $(".form").fadeIn(300);
+            
+            $(function() {
+
+                $(".information-box").css({"top": ($(window).height() - $(".information-box").height()) / 2 + "px",
+                                    	   "left": ($(window).width() - $(".information-box").width()) / 2 + "px"});
+
+                $(".page-modal, .close-information-box").click(function() {
+
+                    $(".form").fadeOut(300);
+
+                    setTimeout(function() {
+
+                        $(".form").remove();
+
+                    }, 1000);
+
+                });
+            
+            });
+
+
+</script>
